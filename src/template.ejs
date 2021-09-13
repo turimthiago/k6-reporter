@@ -291,8 +291,8 @@
           <div class="box metricbox">
             <h4>Iterations</h4>
             <i class="fas fa-redo icon"></i>
-            <div class="row"><div>Total</div><div><%= data.metrics.iterations.values.count %></div></div>
-            <div class="row"><div>Rate</div><div><%= data.metrics.iterations.values.rate.toFixed(2) %>/s</div></div>
+            <div class="row"><div>Total</div><div><%= data.metrics.iterations ? data.metrics.iterations.values.count : 0 %></div></div>
+            <div class="row"><div>Rate</div><div><%= data.metrics.iterations ? data.metrics.iterations.values.rate.toFixed(2) : 0 %>/s</div></div>
           </div>
 
           <div class="box metricbox">
