@@ -314,15 +314,15 @@
           <div class="box metricbox">
             <h4>Data Received</h4>
             <i class="fas fa-cloud-download-alt icon"></i>
-            <div class="row"><div>Total</div><div><%= (data.metrics.data_received.values.count/1000000).toFixed(2) %> MB</div></div>
-            <div class="row"><div>Rate</div><div><%= (data.metrics.data_received.values.rate/1000000).toFixed(2) %> mB/s</div></div>
+            <div class="row"><div>Total</div><div><%= data.metrics.data_received ? (data.metrics.data_received.values.count/1000000).toFixed(2) : 0 %> MB</div></div>
+            <div class="row"><div>Rate</div><div><%= data.metrics.data_received ? (data.metrics.data_received.values.rate/1000000).toFixed(2) : 0 %> mB/s</div></div>
           </div>
 
           <div class="box metricbox">
             <h4>Data Sent</h4>
             <i class="fas fa-cloud-upload-alt icon"></i>
-            <div class="row"><div>Total</div><div><%= (data.metrics.data_sent.values.count/1000000).toFixed(2) %> MB</div></div>
-            <div class="row"><div>Rate</div><div><%= (data.metrics.data_sent.values.rate/1000000).toFixed(2) %> mB/s</div></div>
+            <div class="row"><div>Total</div><div><%= data.metrics.data_sent ? (data.metrics.data_sent.values.count/1000000).toFixed(2) : 0 %> MB</div></div>
+            <div class="row"><div>Rate</div><div><%= data.metrics.data_sent ? (data.metrics.data_sent.values.rate/1000000).toFixed(2) : 0 %> mB/s</div></div>
           </div>   
         </div>
       </div>  
